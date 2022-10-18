@@ -1,18 +1,14 @@
-package cl.aiep.android.DonbenitoysuPandilla
+package cl.aiep.android.donbenitoysuPandilla
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_DESCRIPCION
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_ESPECIALIDAD
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_LOCALIDAD
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_NOMBRE
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.NOMBRE_BASE
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.TABLA_LUGARES
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.VERSION_BD
-import cl.aiep.android.DonbenitoysuPandilla.Lugares.Lugares
-import cl.aiep.android.DonbenitoysuPandilla.bd.BaseDatos
-import cl.aiep.android.DonbenitoysuPandilla.databinding.ActivityFormularioBinding
+import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_DESCRIPCION
+import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_ESPECIALIDAD
+import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_LOCALIDAD
+import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_NOMBRE
+import cl.aiep.android.donbenitoysuPandilla.Constantes.TABLA_LUGARES
+import cl.aiep.android.donbenitoysuPandilla.databinding.ActivityFormularioBinding
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase

@@ -1,4 +1,4 @@
-package cl.aiep.android.DonbenitoysuPandilla.adaptador
+package cl.aiep.android.donbenitoysuPandilla.adaptador
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import cl.aiep.android.DonbenitoysuPandilla.Lugares.Lugares
-import cl.aiep.android.DonbenitoysuPandilla.R
-import cl.aiep.android.DonbenitoysuPandilla.RegistroXvista
-import cl.aiep.android.DonbenitoysuPandilla.databinding.ActivityRegistroXVistaBinding
+import cl.aiep.android.donbenitoysuPandilla.Lugares.Lugares
+import cl.aiep.android.donbenitoysuPandilla.R
+import cl.aiep.android.donbenitoysuPandilla.RegistroXvista
+import cl.aiep.android.donbenitoysuPandilla.databinding.ActivityRegistroXVistaBinding
 
 class LugaresAdapter (
     val listaLugar: List<Lugares>,

@@ -1,26 +1,23 @@
-package cl.aiep.android.DonbenitoysuPandilla
+package cl.aiep.android.donbenitoysuPandilla
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import androidx.recyclerview.widget.LinearLayoutManager
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.FIREBASE
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_DESCRIPCION
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_ESPECIALIDAD
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_LOCALIDAD
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_NOMBRE
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.TABLA_LUGARES
-import cl.aiep.android.DonbenitoysuPandilla.Lugares.Lugares
-import cl.aiep.android.DonbenitoysuPandilla.adaptador.LugaresAdapter
-import cl.aiep.android.DonbenitoysuPandilla.databinding.ActivityRegistroXVistaBinding
+import cl.aiep.android.donbenitoysuPandilla.Constantes.FIREBASE
+import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_DESCRIPCION
+import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_ESPECIALIDAD
+import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_LOCALIDAD
+import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_NOMBRE
+import cl.aiep.android.donbenitoysuPandilla.Constantes.TABLA_LUGARES
+import cl.aiep.android.donbenitoysuPandilla.Lugares.Lugares
+import cl.aiep.android.donbenitoysuPandilla.adaptador.LugaresAdapter
+import cl.aiep.android.donbenitoysuPandilla.databinding.ActivityRegistroXVistaBinding
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import org.checkerframework.checker.index.qual.GTENegativeOne
 
 class RegistroXvista : AppCompatActivity() {
 

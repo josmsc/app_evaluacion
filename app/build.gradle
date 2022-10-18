@@ -8,7 +8,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "cl.aiep.android.DonbenitoysuPandilla"
+        applicationId "cl.aiep.android.donbenitoysuPandilla"
         minSdk 23
         targetSdk 32
         versionCode 1

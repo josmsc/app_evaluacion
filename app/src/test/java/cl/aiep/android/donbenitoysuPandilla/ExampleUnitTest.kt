@@ -1,4 +1,4 @@
-package cl.aiep.android.DonbenitoysuPandilla
+package cl.aiep.android.donbenitoysuPandilla
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package cl.aiep.android.DonbenitoysuPandilla
+package cl.aiep.android.donbenitoysuPandilla
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,17 +1,16 @@
-package cl.aiep.android.DonbenitoysuPandilla.bd
+package cl.aiep.android.donbenitoysuPandilla.bd
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.content.ContentValues
-import androidx.core.content.contentValuesOf
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_DESCRIPCION
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_ESPECIALIDAD
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_ID
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_LOCALIDAD
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_NOMBRE
-import cl.aiep.android.DonbenitoysuPandilla.Constantes.TABLA_LUGARES
-import cl.aiep.android.DonbenitoysuPandilla.Lugares.Lugares
+import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_DESCRIPCION
+import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_ESPECIALIDAD
+import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_ID
+import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_LOCALIDAD
+import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_NOMBRE
+import cl.aiep.android.donbenitoysuPandilla.Constantes.TABLA_LUGARES
+import cl.aiep.android.donbenitoysuPandilla.Lugares.Lugares
 
 class BaseDatos(
     context: Context,
