@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun Ingresar(view: View){
+    fun ingresar(view: View){
         startActivity(Intent(this,RegistroXvista::class.java))
     }
 }

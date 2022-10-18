@@ -67,7 +67,7 @@
         android:layout_width="214dp"
         android:layout_height="48dp"
         android:backgroundTint="#CA1C0F"
-        android:onClick="Ingresar"
+        android:onClick="ingresar"
         android:text="Ingresar"
         android:textColor="#EEDB31"
         app:layout_constraintBottom_toBottomOf="parent"
