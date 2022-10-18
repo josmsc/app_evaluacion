@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import androidx.recyclerview.widget.LinearLayoutManager
+import cl.aiep.android.DonbenitoysuPandilla.Constantes.FIREBASE
 import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_DESCRIPCION
 import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_ESPECIALIDAD
 import cl.aiep.android.DonbenitoysuPandilla.Constantes.KEY_LOCALIDAD
@@ -35,7 +36,9 @@ class RegistroXvista : AppCompatActivity() {
             ingresar()
         }
         binding.btnMostrar.setOnClickListener {
-            //cargarLista()
+            binding.progressBar.visibility = VISIBLE
+            binding.listaData.visibility = GONE
+            listarData(FIREBASE)
         }
     }
 

@@ -13,5 +13,5 @@ object Constantes {
     const val KEY_DESCRIPCION = "descripcion"
 
     //Fuentes de la informacion
-    const val LOCAL = "Local"
+    const val FIREBASE = "firebase"
 }
