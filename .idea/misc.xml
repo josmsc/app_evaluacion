@@ -4,10 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/josef/AndroidStudioProjects/DonbenitoysuPandilla/app/src/main/res/drawable/ic_info.xml" value="0.1335" />
-        <entry key="..\:/Users/josef/AndroidStudioProjects/DonbenitoysuPandilla/app/src/main/res/layout/activity_formulario.xml" value="0.176" />
+        <entry key="..\:/Users/josef/AndroidStudioProjects/DonbenitoysuPandilla/app/src/main/res/layout/activity_formulario.xml" value="0.264" />
         <entry key="..\:/Users/josef/AndroidStudioProjects/DonbenitoysuPandilla/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/josef/AndroidStudioProjects/DonbenitoysuPandilla/app/src/main/res/layout/activity_main2.xml" value="0.2" />
         <entry key="..\:/Users/josef/AndroidStudioProjects/DonbenitoysuPandilla/app/src/main/res/layout/activity_registro_x_vista.xml" value="0.264" />
+        <entry key="..\:/Users/josef/AndroidStudioProjects/DonbenitoysuPandilla/app/src/main/res/layout/item_lista.xml" value="0.264" />
         <entry key="..\:/Users/josef/AndroidStudioProjects/DonbenitoysuPandilla/app/src/main/res/layout/listalocal.xml" value="0.264" />
       </map>
     </option>
