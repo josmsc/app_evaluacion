@@ -23,7 +23,7 @@ class RegistroXvista : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegistroXVistaBinding
 
-    override fun onCreate(savedInstanceState: Bundle?){
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //Vinculacion de la vista con el activity
         binding = ActivityRegistroXVistaBinding.inflate(layoutInflater)
@@ -33,65 +33,67 @@ class RegistroXvista : AppCompatActivity() {
             ingresar()
         }
         binding.btnMostrar.setOnClickListener {
-            binding.progressBar.visibility = VISIBLE
             binding.listaData.visibility = GONE
+            binding.progressBar.visibility = VISIBLE
             listarData(FIREBASE)
         }
     }
 
     private fun ingresar() {
-        startActivity(Intent(this,Formulario::class.java))
+        startActivity(Intent(this, Formulario::class.java))
     }
 
     //Funcion para listar la data
-    fun listarData(fuenteDatos:String){
+    fun listarData(fuenteDatos: String) {
         val listaData = ArrayList<Lugares>()
         val db = Firebase.firestore
-        //que tabla traeremos
-        db.collection(TABLA_LUGARES)
-            .orderBy("nombre")
-            .get()
-            .addOnSuccessListener { result ->
-                for (document in result){
-                    Log.d("Data", "${document.id} => ${document.data}")
-                    //Se crea un objeto lugar y se crea como objeto para agregarlo a la vista
-                    val lugar = Lugares(
-                        document.id,
-                        document.data[KEY_NOMBRE].toString(),
-                        document.data[KEY_LOCALIDAD].toString(),
-                        document.data[KEY_ESPECIALIDAD].toString(),
-                        document.data[KEY_DESCRIPCION].toString()
-                    )
-                    //Se agrega la data a la lista
-                    listaData.add(lugar)
+        if (fuenteDatos == FIREBASE) {
+            //que tabla traeremos
+            db.collection(TABLA_LUGARES)
+                .orderBy("nombre")
+                .get()
+                .addOnSuccessListener { result ->
+                    for (document in result) {
+                        Log.d("Data", "${document.id} => ${document.data}")
+                        //Se crea un objeto lugar y se crea como objeto para agregarlo a la vista
+                        val lugar = Lugares(
+                            document.id,
+                            document.data[KEY_NOMBRE].toString(),
+                            document.data[KEY_LOCALIDAD].toString(),
+                            document.data[KEY_ESPECIALIDAD].toString(),
+                            document.data[KEY_DESCRIPCION].toString()
+                        )
+                        //Se agrega la data a la lista
+                        listaData.add(lugar)
+                    }
+                    //Configurar la lista
+                    mostrarDataEnLista(listaData)
                 }
-                //Configurar la lista
-                mostrarDataEnLista(listaData)
-            }
-            .addOnFailureListener { exception ->
-                binding.listaData.visibility = GONE
-                binding.progressBar.visibility = GONE
-                Log.w("Data", "Error getting documents.", exception)
-            }
-
-    }
-
-    private fun mostrarDataEnLista(listaData:ArrayList<Lugares>){
+                .addOnFailureListener { exception ->
+                    binding.listaData.visibility = GONE
+                    binding.progressBar.visibility = GONE
+                    Log.w("Data", "Error getting documents.", exception)
+                }
+        }
+        }
+    private fun mostrarDataEnLista(listaData: ArrayList<Lugares>) {
         val adaptadorDataLugares = LugaresAdapter(listaData, binding, this)
         //configurar la lista del recyclerview
         binding.listaData.apply {
-            layoutManager = LinearLayoutManager (applicationContext)
+            layoutManager = LinearLayoutManager(applicationContext)
             adapter = adaptadorDataLugares
         }
         //Mostrar la lista y ocultar el lugar
         binding.progressBar.visibility = GONE
         binding.listaData.visibility = VISIBLE
     }
+    }
 
 
 
 
-}
+
+
 
 
 
