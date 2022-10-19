@@ -21,14 +21,12 @@ class LugaresAdapter (
         val txtNombre: TextView
         val txtLocalidad: TextView
         val txtEspecialidad: TextView
-        val txtDescripcion: TextView
         val btnReserva: Button
 
         init {
             txtNombre = view.findViewById(R.id.txtNombreLocal)
             txtLocalidad = view.findViewById(R.id.txtLocalidad)
             txtEspecialidad = view.findViewById(R.id.txtEspecialidad)
-            txtDescripcion = view.findViewById(R.id.txtdescripcion)
             btnReserva = view.findViewById(R.id.btnReservar)
         }
     }
@@ -43,7 +41,6 @@ class LugaresAdapter (
         holder.txtNombre.text = listaLugar.get(position).nombre
         holder.txtLocalidad.text = listaLugar.get(position).localidad
         holder.txtEspecialidad.text = listaLugar.get(position).especialidad
-        holder.txtDescripcion.text = listaLugar.get(position).descripcion
         }
 
     override fun getItemCount(): Int {

@@ -21,7 +21,7 @@ import com.google.firebase.ktx.Firebase
 
 class RegistroXvista : AppCompatActivity() {
 
-    private lateinit var binding: ActivityRegistroXVistaBinding
+    lateinit var binding: ActivityRegistroXVistaBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,8 +46,8 @@ class RegistroXvista : AppCompatActivity() {
     //Funcion para listar la data
     fun listarData(fuenteDatos: String) {
         val listaData = ArrayList<Lugares>()
-        val db = Firebase.firestore
         if (fuenteDatos == FIREBASE) {
+            val db = Firebase.firestore
             //que tabla traeremos
             db.collection(TABLA_LUGARES)
                 .orderBy("nombre")
