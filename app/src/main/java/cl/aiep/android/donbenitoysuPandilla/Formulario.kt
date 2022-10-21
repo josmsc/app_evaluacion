@@ -7,7 +7,11 @@ import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_DESCRIPCION
 import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_ESPECIALIDAD
 import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_LOCALIDAD
 import cl.aiep.android.donbenitoysuPandilla.Constantes.KEY_NOMBRE
+import cl.aiep.android.donbenitoysuPandilla.Constantes.NOMBRE_BASE
 import cl.aiep.android.donbenitoysuPandilla.Constantes.TABLA_LUGARES
+import cl.aiep.android.donbenitoysuPandilla.Constantes.VERSION_BD
+import cl.aiep.android.donbenitoysuPandilla.Lugares.Lugares
+import cl.aiep.android.donbenitoysuPandilla.bd.BaseDatos
 import cl.aiep.android.donbenitoysuPandilla.databinding.ActivityFormularioBinding
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
@@ -48,10 +52,10 @@ class Formulario : AppCompatActivity() {
     fun guardarDatosFirebase() {
         FirebaseFirestore.setLoggingEnabled(true)
         val db = Firebase.firestore
-        val nombre = binding.nombreLocal.editableText.toString()
-        val localidad = binding.direccion.editableText.toString()
-        val especialidad = binding.especialidad.editableText.toString()
-        val descripcion = binding.descripcionLocal.editableText.toString()
+        val nombre = binding.nombreLocal.editableText?.toString()
+        val localidad = binding.direccion.editableText?.toString()
+        val especialidad = binding.especialidad.editableText?.toString()
+        val descripcion = binding.descripcionLocal.editableText?.toString()
         //Se crea un nuevo hashmap con informacion
         val localAGuardar = hashMapOf(
             KEY_NOMBRE to nombre,

@@ -1,15 +1,20 @@
 package cl.aiep.android.donbenitoysuPandilla.adaptador
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import cl.aiep.android.donbenitoysuPandilla.Formulario
 import cl.aiep.android.donbenitoysuPandilla.Lugares.Lugares
 import cl.aiep.android.donbenitoysuPandilla.R
 import cl.aiep.android.donbenitoysuPandilla.RegistroXvista
+import cl.aiep.android.donbenitoysuPandilla.Reserva
 import cl.aiep.android.donbenitoysuPandilla.databinding.ActivityRegistroXVistaBinding
+
 
 class LugaresAdapter (
     val listaLugar: List<Lugares>,
@@ -41,7 +46,10 @@ class LugaresAdapter (
         holder.txtNombre.text = listaLugar.get(position).nombre
         holder.txtLocalidad.text = listaLugar.get(position).localidad
         holder.txtEspecialidad.text = listaLugar.get(position).especialidad
-        }
+    }
+
+
+
 
     override fun getItemCount(): Int {
         return listaLugar.size
